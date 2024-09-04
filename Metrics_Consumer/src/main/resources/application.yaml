@@ -1,0 +1,21 @@
+spring:
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: "metrics-group"
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/Metric
+    username: postgres
+    password: postgre123
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    show-sql: true
+    hibernate.ddl-auto: none
+  liquibase:
+    change-log: classpath:db/changelog/db.changelog-master.xml
+    enabled: true
+    drop-first: true
+
+server:
+  port: 8079
