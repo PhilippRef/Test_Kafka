@@ -1,6 +1,6 @@
 Приложение для мониторинга метрик работы системы.
 
-Используемые технологии: Spring Boot, Spring Data Jpa, Maven, Kafka, PostgeSQL, liquibase.
+Используемые технологии: Spring Boot, Spring Data Jpa, Maven, Kafka, PostgeSQL, Docker, liquibase.
 
 Для запуска приложения необходимо выполнить следующие действия:
 1. Создать БД в PostgeSQL с именем metrics.

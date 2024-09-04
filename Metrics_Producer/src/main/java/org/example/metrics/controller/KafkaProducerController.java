@@ -21,6 +21,19 @@ public class KafkaProducerController {
 
     private final KafkaSenderService kafkaSenderService;
 
+    /**
+     * Метод post запроса для создания метрики
+     * Пример запроса: POST http://localhost:9090/metrics в формате Json.
+     * {
+     *     "cpuUsage": "45",
+     *     "memoryUsage": "60",
+     *     "cpuTemperature": "70"
+     * }
+     * Пример ответа:
+     * Data sent successfully: MetricDto(id=null, cpuUsage=45.0, cpuTemperature=60.0, memoryUsage=70.0, errorMessage=null)
+     * @param metricDto
+     * @return ResponseEntity
+     */
     @PostMapping("/metrics")
     @Operation(summary = "Send metric", description = "Создание метрик")
     public ResponseEntity<?> sendMetric(@RequestBody MetricDto metricDto) {
